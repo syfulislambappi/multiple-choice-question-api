@@ -1,0 +1,8 @@
+{
+  "name": "multiple-choice-question-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/syfulislambappi/multiple-choice-question-api",
+  "author": "Syful Islam",
+  "license": "MIT"
+}
