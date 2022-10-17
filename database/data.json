@@ -1,6 +1,20 @@
 [
   {
-    "title": "Which is the largest continent?",
-    "options": ["Asia", "Europe", "Africa", "Australia"]
+    "username": "Syful Islam",
+    "questionId": "S6hty6iPU",
+    "title": "Who is the father of Marketing?",
+    "options": ["Philip Kotler", "J Skinner", "Barringer", "Henry Feol"],
+    "answer": "Philip Kotler",
+    "createdAt": "2022-10-17T17:54:51.514Z",
+    "updatedAt": "2022-10-17T17:54:51.514Z"
+  },
+  {
+    "username": "Syful Islam",
+    "questionId": "ANNkxhw7v",
+    "title": "Who is the father of Marketing?",
+    "options": ["Philip Kotler", "J Skinner", "Barringer", "Henry Feol"],
+    "answer": "Philip Kotler",
+    "createdAt": "2022-10-17T17:54:57.015Z",
+    "updatedAt": "2022-10-17T17:54:57.015Z"
   }
 ]
