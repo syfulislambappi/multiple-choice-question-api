@@ -37,3 +37,16 @@ exports.getQuestionById = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.updateQuestionById = async (req, res, next) => {
+  try {
+    const { questionId } = req.params;
+    const { title, options, answer } = req.body;
+    quesitonDb.updateById(questionId, title, options, answer);
+    res.status(200).json({ message: "Question is updated successfully." });
+  } catch (error) {
+    error.status = 501;
+    error.message = `Can't update the question`;
+    next(error);
+  }
+};
