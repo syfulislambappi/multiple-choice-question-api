@@ -50,3 +50,15 @@ exports.updateQuestionById = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.deleteQuesitonById = async (req, res, next) => {
+  try {
+    const { questionId } = req.params;
+    quesitonDb.deleteById(questionId);
+    res.status(200).json({ message: "Quesiton is deleted successfully." });
+  } catch (error) {
+    error.status = 501;
+    error.message = `Can't delete the quesiton`;
+    next(error);
+  }
+};

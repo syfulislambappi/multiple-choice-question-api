@@ -3,6 +3,7 @@ const Question = require("../models/Question");
 const readData = require("../util/readData");
 const writeData = require("../util/writeData");
 const updateData = require("../util/updateData");
+const deleteData = require("../util/deleteData");
 const dataPath = path.join(__dirname, "data.json");
 
 class QuestionDb {
@@ -51,6 +52,15 @@ class QuestionDb {
    */
   updateById(questionId, title, options, answer) {
     return updateData(dataPath, title, options, answer, questionId);
+  }
+
+  /**
+   * Delete quesiton by quesiton id
+   * @param {string} questionId
+   * @returns {Promise}
+   */
+  deleteById(questionId) {
+    return deleteData(questionId, dataPath);
   }
 }
 
