@@ -22,3 +22,18 @@ exports.createQuestion = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.getQuestionById = async (req, res, next) => {
+  try {
+    const { questionId } = req.params;
+    const questions = await quesitonDb.find();
+    const question = JSON.parse(questions).find(
+      (question) => question.questionId === questionId
+    );
+    res.status(200).json(question);
+  } catch (error) {
+    error.status = 501;
+    error.message = `Can't find question with the id`;
+    next(error);
+  }
+};

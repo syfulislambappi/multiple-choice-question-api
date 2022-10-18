@@ -25,6 +25,17 @@ class QuestionDb {
     writeData(dataPath, question);
     return question;
   }
+
+  findById(questionId) {
+    readData(dataPath).then((questions) => {
+      const parsedQuesiton = JSON.parse(questions);
+      const question = parsedQuesiton.find(
+        (question) => question.questionId === questionId
+      );
+      console.log(question);
+      return question;
+    });
+  }
 }
 
 const quesitonDb = new QuestionDb();
