@@ -10,7 +10,7 @@ exports.healthHandler = async (_req, res, next) => {
 
 exports.homeHandler = async (_req, res, next) => {
   try {
-    res.status(200).render("index");
+    res.status(200).redirect("/api/v1/questions");
   } catch (error) {
     error.status = 501;
     error.message = `There is an error in home route`;

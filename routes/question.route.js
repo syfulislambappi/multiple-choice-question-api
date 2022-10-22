@@ -4,6 +4,8 @@ const {
   getQuestionById,
   updateQuestionById,
   deleteQuesitonById,
+  getQuesitonsByUsername,
+  deleteQuesitonByUsername,
 } = require("../controller/question.controller");
 
 const router = require("express").Router();
@@ -15,5 +17,10 @@ router
   .get(getQuestionById)
   .patch(updateQuestionById)
   .delete(deleteQuesitonById);
+
+router
+  .route("/u/:username")
+  .get(getQuesitonsByUsername)
+  .delete(deleteQuesitonByUsername);
 
 module.exports = router;

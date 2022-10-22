@@ -62,3 +62,27 @@ exports.deleteQuesitonById = async (req, res, next) => {
     next(error);
   }
 };
+
+exports.getQuesitonsByUsername = async (req, res, next) => {
+  try {
+    const { username } = req.params;
+    const quesitons = await quesitonDb.findByUsername(username);
+    res.status(200).json(quesitons);
+  } catch (error) {
+    error.status = 501;
+    error.message = `Can't filtered quesitons`;
+    next(error);
+  }
+};
+
+exports.deleteQuesitonByUsername = async (req, res, next) => {
+  try {
+    const { username } = req.params;
+    const message = quesitonDb.deleteByUsername(username);
+    res.status(200).json({ message: message });
+  } catch (error) {
+    error.status = 501;
+    error.message = `Can't deleted quesions`;
+    next(error);
+  }
+};

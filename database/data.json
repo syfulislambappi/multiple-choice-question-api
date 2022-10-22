@@ -7,5 +7,65 @@
     "answer": "Philip Kotler",
     "createdAt": "2022-10-17T17:54:51.514Z",
     "updatedAt": "2022-10-17T17:54:51.514Z"
+  },
+  {
+    "username": "Syful Islam",
+    "questionId": "NQ8tM17bR",
+    "title": "Who is the father of Marketing?",
+    "options": ["F. W. Taylor", "J Skinner", "Barringer", "Philip Kotler"],
+    "answer": "Philip Kotler",
+    "createdAt": "2022-10-22T13:10:29.053Z",
+    "updatedAt": "2022-10-22T13:10:29.053Z"
+  },
+  {
+    "username": "Syful Islam",
+    "questionId": "C3KJX9T60",
+    "title": "Who is the father of Economics?",
+    "options": ["F. W. Taylor", "J Skinner", "Barringer", "Adam Smith"],
+    "answer": "Adam Smith",
+    "createdAt": "2022-10-22T13:10:59.358Z",
+    "updatedAt": "2022-10-22T13:10:59.358Z"
+  },
+  {
+    "username": "Rakibul Islam",
+    "questionId": "7gIkDeuvI",
+    "title": "Who is the father of Bangladesh?",
+    "options": [
+      "Sheikh Hasina",
+      "Ziaur Rahman",
+      "Sheikh Mujibur Rahman",
+      "Tajuddin Ahmed"
+    ],
+    "answer": "Sheikh Mujibur Rahman",
+    "createdAt": "2022-10-22T13:12:19.558Z",
+    "updatedAt": "2022-10-22T13:12:19.558Z"
+  },
+  {
+    "username": "Rakibul Islam",
+    "questionId": "3IdIqc9aq",
+    "title": "Who is the president of Awami Leage?",
+    "options": [
+      "Sheikh Hasina",
+      "Ziaur Rahman",
+      "Sheikh Mujibur Rahman",
+      "Tajuddin Ahmed"
+    ],
+    "answer": "Sheikh Hasina",
+    "createdAt": "2022-10-22T13:12:54.783Z",
+    "updatedAt": "2022-10-22T13:12:54.783Z"
+  },
+  {
+    "username": "Rakibul Islam",
+    "questionId": "Lnm0wg3GZ",
+    "title": "Who is the president of BNP?",
+    "options": [
+      "Sheikh Hasina",
+      "Ziaur Rahman",
+      "Sheikh Mujibur Rahman",
+      "Khaleda Zia"
+    ],
+    "answer": "Khaleda Zia",
+    "createdAt": "2022-10-22T13:13:15.654Z",
+    "updatedAt": "2022-10-22T13:14:26.930Z"
   }
 ]

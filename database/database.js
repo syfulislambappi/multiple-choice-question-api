@@ -4,6 +4,7 @@ const readData = require("../util/readData");
 const writeData = require("../util/writeData");
 const updateData = require("../util/updateData");
 const deleteData = require("../util/deleteData");
+const deleteManyData = require("../util/deleteManyData");
 const dataPath = path.join(__dirname, "data.json");
 
 class QuestionDb {
@@ -61,6 +62,32 @@ class QuestionDb {
    */
   deleteById(questionId) {
     return deleteData(questionId, dataPath);
+  }
+  /**
+   * Find quesiton by username
+   * @param {string} username
+   * @returns {Array} result
+   */
+  async findByUsername(username) {
+    try {
+      const quesitons = await readData(dataPath);
+      const parsedQuesiton = JSON.parse(quesitons);
+      const result = parsedQuesiton.filter(
+        (quesiton) => quesiton.username === username
+      );
+      return result;
+    } catch (error) {
+      return error;
+    }
+  }
+  /**
+   * Delete question by username
+   * @param {string} username
+   * @returns {string} string
+   */
+  deleteByUsername(username) {
+    deleteManyData(dataPath, username);
+    return "Questions are deleted successfully.";
   }
 }
 
