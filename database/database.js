@@ -10,7 +10,7 @@ const dataPath = path.join(__dirname, "data.json");
 class QuestionDb {
   /**
    * Find all the questions
-   * @returns {Array<Question>}
+   * @returns {Array<Question>} Questions
    */
   find() {
     return readData(dataPath);
@@ -22,6 +22,7 @@ class QuestionDb {
    * @param {string} title
    * @param {Array<string>} options
    * @param {string} answer
+   * @returns {object} Object
    */
   create(username, title, options, answer) {
     const question = new Question(username, title, options, answer);
@@ -32,7 +33,7 @@ class QuestionDb {
   /**
    * Get question by id
    * @param {string} questionId
-   * @returns {Object<Question>}
+   * @returns {Object<Question>} Object
    */
   findById(questionId) {
     readData(dataPath).then((questions) => {
@@ -50,6 +51,7 @@ class QuestionDb {
    * @param {string} title
    * @param {Array<string>} options
    * @param {string} answer
+   * @returns {Promise} Promise
    */
   updateById(questionId, title, options, answer) {
     return updateData(dataPath, title, options, answer, questionId);
@@ -58,11 +60,12 @@ class QuestionDb {
   /**
    * Delete quesiton by quesiton id
    * @param {string} questionId
-   * @returns {Promise}
+   * @returns {Promise} Promise
    */
   deleteById(questionId) {
     return deleteData(questionId, dataPath);
   }
+
   /**
    * Find quesiton by username
    * @param {string} username
@@ -80,6 +83,7 @@ class QuestionDb {
       return error;
     }
   }
+
   /**
    * Delete question by username
    * @param {string} username

@@ -13,7 +13,7 @@ const deleteData = (questionId, path) => {
       (index) => index.questionId === questionId
     );
     if (index === -1) {
-      return false;
+      return Error(`Can't find data with the id.`);
     } else {
       parsedQuesitons.splice(index, 1);
       fs.writeFile(path, JSON.stringify(parsedQuesitons), (err) => {

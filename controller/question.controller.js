@@ -33,7 +33,7 @@ exports.getQuestionById = async (req, res, next) => {
     res.status(200).json(question);
   } catch (error) {
     error.status = 501;
-    error.message = `Can't find question with the id`;
+    error.message = `Can't get the id in the database.`;
     next(error);
   }
 };
@@ -43,10 +43,10 @@ exports.updateQuestionById = async (req, res, next) => {
     const { questionId } = req.params;
     const { title, options, answer } = req.body;
     quesitonDb.updateById(questionId, title, options, answer);
-    res.status(200).json({ message: "Question is updated successfully." });
+    res.status(200).json({ message: "Data is updated successfully." });
   } catch (error) {
     error.status = 501;
-    error.message = `Can't update the question`;
+    error.message = `Can't get the id in the database.`;
     next(error);
   }
 };
@@ -55,10 +55,10 @@ exports.deleteQuesitonById = async (req, res, next) => {
   try {
     const { questionId } = req.params;
     quesitonDb.deleteById(questionId);
-    res.status(200).json({ message: "Quesiton is deleted successfully." });
+    res.status(200).json({ message: "Data is deleted successfully." });
   } catch (error) {
     error.status = 501;
-    error.message = `Can't delete the quesiton`;
+    error.message = `Can't get the id from the database.`;
     next(error);
   }
 };
@@ -70,7 +70,7 @@ exports.getQuesitonsByUsername = async (req, res, next) => {
     res.status(200).json(quesitons);
   } catch (error) {
     error.status = 501;
-    error.message = `Can't filtered quesitons`;
+    error.message = `Can't find data with the username.`;
     next(error);
   }
 };
@@ -82,7 +82,7 @@ exports.deleteQuesitonByUsername = async (req, res, next) => {
     res.status(200).json({ message: message });
   } catch (error) {
     error.status = 501;
-    error.message = `Can't deleted quesions`;
+    error.message = `Can't deleted data with the username.`;
     next(error);
   }
 };

@@ -20,7 +20,7 @@ const updateData = (path, title, options, answer, questionId) => {
     question.answer = answer || question.answer;
     question.updatedAt = new Date();
     fs.writeFile(path, JSON.stringify(parsedQuesitons), (err) => {
-      console.log("written");
+      console.log("Data is updated successfully.");
     });
   });
 };

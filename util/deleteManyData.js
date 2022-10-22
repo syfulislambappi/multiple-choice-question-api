@@ -13,14 +13,14 @@ const deleteManyData = async (path, username) => {
     const filteredQuestions = parsedQuesitons.filter(
       (question) => question.username === username
     );
-    console.log(filteredQuestions);
+
     for (let i = 0; i < filteredQuestions.length; i++) {
       const filteredQuestion = filteredQuestions[i].questionId;
       const index = parsedQuesitons.findIndex(
         (value) => value.questionId === filteredQuestion
       );
       if (index === -1) {
-        return Error(`Username cannot found`);
+        return Error(`Username cannot find from the database.`);
       } else {
         parsedQuesitons.splice(index, 1);
       }
